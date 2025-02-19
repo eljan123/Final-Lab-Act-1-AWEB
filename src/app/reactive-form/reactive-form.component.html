@@ -1,0 +1,36 @@
+<h1 class="title">Reactive Form</h1>
+<h2 class="subtitle">Finals Lab Activity 2</h2>
+<div class="form">
+  <p>Username: </p>
+  <form (ngSubmit)="onSubmit()">
+    <input class="input-box" type="text" name="username" [(ngModel)]="username" placeholder="Enter Username" required>
+    <br>
+
+    <p>Name: </p>
+    <input class="input-box" type="text" name="name" [(ngModel)]="name" placeholder="Enter Name" required>
+    <br>
+
+    <p>Email: </p>
+    <input class="input-box" type="text" name="email" [(ngModel)]="email" placeholder="Enter Email" required>
+    <br>
+
+    <p>Contact: </p>
+    <input class="input-box" type="text" name="contact" [(ngModel)]="contact" placeholder="Enter Contact" required>
+    <br>
+
+    <p>Address: </p>
+    <input class="input-box" type="text" name="Address" [(ngModel)]="address" placeholder="Enter Address" required>
+    <br>
+
+    <input class="btn" type="submit" value="Submit">
+  </form>
+
+  <div *ngIf="submitted">
+    <p>Username: {{ username }}</p>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Contact: {{ contact }}</p>
+    <p>Address: {{ address }}</p>
+  </div>
+  <button routerLink="/" class="home-page-btn">Go back to Home Page</button>
+</div>

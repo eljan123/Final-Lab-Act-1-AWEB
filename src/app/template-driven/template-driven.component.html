@@ -1,0 +1,27 @@
+<h1 class="title">Template Driven Form</h1>
+<h2 class="subtitle">Finals Lab Activity 1</h2>
+<div class="form">
+  <p>Username: </p>
+  <form (ngSubmit)="onSubmit()">
+    <input class="input-box" type="text" name="username" [(ngModel)]="username" placeholder="Enter Username" required>
+    <br>
+
+    <p>Name: </p>
+    <input class="input-box" type="text" name="name" [(ngModel)]="name" placeholder="Enter Name" required>
+    <br>
+
+    <p>Email: </p>
+    <input class="input-box" type="text" name="email" [(ngModel)]="email" placeholder="Enter Email" required>
+    <br>
+
+    <input class="btn" type="submit" value="Submit">
+  </form>
+
+  <div *ngIf="submitted">
+    <p>Username: {{ username }}</p>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+  </div>
+
+  <button routerLink="/" class="home-page-btn">Go back to Home Page</button>
+</div>
